@@ -1,14 +1,18 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Colors" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -16,11 +20,66 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img_txt_colores" translatesAutoresizingMaskIntoConstraints="NO" id="kHe-5o-v76">
+                                <rect key="frame" x="52" y="155" width="271" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="F0M-1T-Koc"/>
+                                    <constraint firstAttribute="width" constant="271" id="gpf-wx-9JT"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0k5-pE-jBw">
+                                <rect key="frame" x="79" y="28" width="216" height="105"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="216" id="5sH-zP-ew7"/>
+                                    <constraint firstAttribute="height" constant="105" id="8e4-37-uLP"/>
+                                </constraints>
+                                <state key="normal" image="img_switch_off"/>
+                                <connections>
+                                    <action selector="btnSwitchPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0FC-qP-Gut"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img_knob_base" translatesAutoresizingMaskIntoConstraints="NO" id="Gng-Fz-0EI">
+                                <rect key="frame" x="99" y="394" width="176" height="176"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="176" id="kL2-XV-nKL"/>
+                                    <constraint firstAttribute="height" constant="176" id="uHa-NB-laZ"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img_knob" translatesAutoresizingMaskIntoConstraints="NO" id="BbS-Zc-2rx">
+                                <rect key="frame" x="109" y="404" width="156" height="156"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="156" id="XkX-HF-8i3"/>
+                                    <constraint firstAttribute="height" constant="156" id="tUN-W5-I07"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="kHe-5o-v76" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="0c1-nO-Mdv"/>
+                            <constraint firstItem="BbS-Zc-2rx" firstAttribute="centerY" secondItem="Gng-Fz-0EI" secondAttribute="centerY" id="1wG-fx-2Qj"/>
+                            <constraint firstItem="BbS-Zc-2rx" firstAttribute="centerX" secondItem="Gng-Fz-0EI" secondAttribute="centerX" id="5HV-fp-f1l"/>
+                            <constraint firstItem="kHe-5o-v76" firstAttribute="top" secondItem="0k5-pE-jBw" secondAttribute="bottom" constant="22" id="AtG-Kf-qbx"/>
+                            <constraint firstItem="kHe-5o-v76" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="135" id="F5z-gV-ysW"/>
+                            <constraint firstItem="0k5-pE-jBw" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="GWS-NX-Zsq"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Gng-Fz-0EI" secondAttribute="bottom" constant="97" id="IVd-3h-Khv"/>
+                            <constraint firstItem="Gng-Fz-0EI" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="wjr-cR-shX"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="btnSwitch" destination="0k5-pE-jBw" id="IDO-2Y-WSL"/>
+                        <outlet property="imgKnob" destination="BbS-Zc-2rx" id="NNS-LM-s9J"/>
+                        <outlet property="imgKnobBase" destination="Gng-Fz-0EI" id="Xcx-7x-nfN"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
         </scene>
     </scenes>
+    <resources>
+        <image name="img_knob" width="156" height="156"/>
+        <image name="img_knob_base" width="176" height="176"/>
+        <image name="img_switch_off" width="162" height="105"/>
+        <image name="img_txt_colores" width="271" height="44"/>
+    </resources>
 </document>
